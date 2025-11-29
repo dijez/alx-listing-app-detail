@@ -1,7 +1,10 @@
+import { PropertyProps } from "@/interfaces";
+
 export const API_BASE_URL = 'https://api.example.com';
 export const APP_NAME = 'ALX Listing App';
 export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     { 
+      id: 1,
         name: "Villa Ocean Breeze",
         address: {
             state: "Seminyak",

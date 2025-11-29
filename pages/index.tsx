@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Pill from "@/components/common/Pill";
 import { PROPERTYLISTINGSAMPLE } from "@/constants";
-
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +19,7 @@ export default function Home() {
 
   return (
     <div>
+
       <section> {/* hero section  */}
 
       <div>{/* hold image using style */}</div>
@@ -42,13 +43,15 @@ export default function Home() {
 
 
     {/* property section */}
-    {PROPERTYLISTINGSAMPLE.map((property) => (
-  <div>
-    <img src={property.image} width={200} height={150} />
-    <h3>{property.name}</h3>
-    <p>${property.price}</p>
-    <span>{property.rating} ⭐</span>
-  </div>
+   {PROPERTYLISTINGSAMPLE.map((property) => (
+  <Link href={`/property/${property.id}`} key={property.id}>
+    <div>
+      <img src={property.image} width={200} height={150} />
+      <h3>{property.name}</h3>
+      <p>${property.price}</p>
+      <span>{property.rating} ⭐</span>
+    </div>
+  </Link>
 ))}
 
   </div>

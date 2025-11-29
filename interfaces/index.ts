@@ -14,6 +14,7 @@ export interface PillProps{
 }
 
 export interface PropertyProps{
+  id: number,
   name: string,
     address: {
       state: string,
@@ -21,7 +22,7 @@ export interface PropertyProps{
       country: string
     },
     rating: number,
-    category: [string],
+    category: [string, string, string],
     price: number,
     offers: {
       bed: string,

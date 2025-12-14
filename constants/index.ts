@@ -4,6 +4,7 @@ export const API_BASE_URL = 'https://api.example.com';
 export const APP_NAME = 'ALX Listing App';
 export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     { 
+      // added an id here thats why i have an error for the others
       id: 1,
         name: "Villa Ocean Breeze",
         address: {
